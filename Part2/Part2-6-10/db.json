@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Elvio Lador",
+      "num": 100100
+    },
+    {
+      "id": "2",
+      "name": "Loma Maria",
+      "num": 600500
+    },
+    {
+      "id": "3",
+      "name": "Armando Torres",
+      "num": 777000
+    },
+    {
+      "id": "5",
+      "name": "Rosa Melano",
+      "num": "800800"
+    },
+    {
+      "id": "6f7e",
+      "name": "Elma Mavergas",
+      "num": "200200"
+    }
+  ]
+}
