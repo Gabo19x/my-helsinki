@@ -8,3 +8,4 @@
 
 > [!TIP]
 > 2. Part2: Part2-1-5 the 2.1 to 2.5 exercises. Part2-6-10: the 2.6 to 2.17 exercises.
+> Part2-18-20: the 2.18 to 2.19 exercises.
