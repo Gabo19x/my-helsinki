@@ -3,6 +3,7 @@
     Maneja, segun el error, una cosa u otra
  */
 module.exports = (err, req, res, next) => {
+    console.log("Entro al middle");
     console.log("ERROR:", err.name);
     
     if(err.name == "CastError") {

@@ -3,47 +3,27 @@ const app = express();
 const cors = require('cors')
 
 require("./mongo.js");
-
-const Blog = require("./models/blog.js")
 const handleErrors = require("./middleware/handleErrors.js")
 
 app.use(cors())
 app.use(express.json())
 
-/* FUNCION GET
-    Se muestran todos los blogs
-*/
-app.get("/api/blogs", (req, res, next) => {
-    Blog.find({})
-        .then((blogs) => { res.status(200).json(blogs) })
-        .catch((err) => { next(err) })
-})
+// Toda la seccion de blogs
+const rutaBlog = require("./routes/blog.js")
+app.use("/api/blogs", rutaBlog)
 
-/* FUNCION POST
-    Se crea un nuevo blog
-*/
-app.post("/api/blogs", (req, res, next) => {
-    let nuevo = req.body
+// Toda la seccion de usuarios
+const nuevo = require("./routes/user.js");
+app.use("/api/users", nuevo);
 
-    if(nuevo.title != null) {
+// app.get("/test", (req, res, next) => {
+//   res.status(200).json({ message: 'El servidor está funcionando' })
+// })
 
-        const blog = new Blog({
-            title: nuevo.title,
-            author: nuevo.author,
-            url: nuevo.url,
-            likes: nuevo.likes
-        })
-
-        blog.save()
-            .then((blog) => {
-                console.log(`Se creo ${blog.title}`);
-                res.status(204).json(blog)
-            })
-            .catch((err) => { console.log(err) })
-    } else {
-        res.status(400).end("No se puede crear")
-    }
-})
+// app.post('/api/test-db', (req, res) => {
+//   console.log('Cuerpo de la solicitud:', req.body);
+//   res.json({ message: 'POST recibido correctamente', body: req.body });
+// });
 
 // MIDDLEWARE
 app.use(handleErrors)
