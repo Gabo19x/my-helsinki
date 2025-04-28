@@ -11,4 +11,4 @@
 > Part2-18-20: the 2.18 to 2.19 exercises.
 
 > [!TIP]
-> 4. Part4: 4.1 to 4.2 exercises.
+> 4. Part4: 4.1 to 4.23 exercises. (The TEST exercises are not performed)

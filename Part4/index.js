@@ -16,15 +16,6 @@ app.use("/api/blogs", rutaBlog)
 const nuevo = require("./routes/user.js");
 app.use("/api/users", nuevo);
 
-// app.get("/test", (req, res, next) => {
-//   res.status(200).json({ message: 'El servidor está funcionando' })
-// })
-
-// app.post('/api/test-db', (req, res) => {
-//   console.log('Cuerpo de la solicitud:', req.body);
-//   res.json({ message: 'POST recibido correctamente', body: req.body });
-// });
-
 // MIDDLEWARE
 app.use(handleErrors)
 
